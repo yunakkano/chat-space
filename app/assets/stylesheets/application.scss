@@ -94,8 +94,21 @@
           display: flex;
         }  
       }
-      &__edit-group{
-
+      &__right-box{
+        width: 72px;
+        margin-top: 28px;
+        margin-right: 40px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        &__edit-btn{
+          height: 40px;
+          line-height: 40px;
+          padding-left: 20px;
+          padding-right: 20px;
+          color: #38aef0;
+          border: solid 1px  #38aef0;
+        }
       }
     }
     &__message-list{
