@@ -1,4 +1,13 @@
 .side-bar
   .side-bar__user-name
     .side-bar__user-name__name-icons
+      %p.side-bar__user-name__name-icons__name
+        yutaka
+      %ul.side-bar__user-name__name-icons__icons
+        %li
+          = link_to "" , class: "side-bar__user-name__name-icons__icons__edit" do
+            = icon('far', 'edit')
+        %li
+          = link_to "", class: "side-bar__user-name__name-icons__icons__config" do
+            = icon('fas', 'cog')
   .side-bar__group-list
