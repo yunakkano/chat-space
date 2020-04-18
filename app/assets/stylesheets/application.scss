@@ -48,7 +48,20 @@
 
     &__group-list{
       background-color: #2f3e51;
+      color: #ffffff;
       height: calc(100% - 100px);
+      padding-top: 20px;
+      font-weight: bold;
+      &__group-name{
+        font-size: 15px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+      }
+      &__last-message{
+        font-size: 11px;
+        margin-left: 20px;
+        margin-bottom: 40px;
+      }
     }
 
   }
@@ -57,7 +70,6 @@
     background-color: #ffffff;
     height: 100%;
     width: calc(100vw - 300px);
-    
     &__group-info{
       background-color: #ffffff;
       height: 100px;
