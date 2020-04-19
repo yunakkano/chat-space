@@ -35,3 +35,11 @@
           2020/10/22(Sat) 09:17:00
       .chat-main__message-list__message__text
         babooo
+  .chat-main__message-form
+    = form_tag '#', method: :index, class: "chat-main__message-form__form" do
+      .chat-main__message-form__form__input-box
+        = text_field_tag 'messagetext', '', class: "chat-main__message-form__form__input-box__text", placeholder: "type a message" 
+        %label{class: "chat-main__message-form__form__input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "chat-main__message-form__form__input-box__file-input"}
+      = submit_tag value="Send", class: "chat-main__message-form__form__submit"
