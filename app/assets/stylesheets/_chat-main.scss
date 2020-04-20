@@ -1,0 +1,118 @@
+.chat-main {
+  background-color: $WhiteForChatMainBG;
+  height: 100%;
+  width: calc(100vw - 300px);
+  &__group-info{
+    background-color: $WhiteForGroupInfoBG;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__left-box{
+      height: 100%;
+      width: auto;
+      padding-top: 35px;
+      padding-left: $SideMarginsChatMain;
+      &__current-group{
+        height: auto;
+        color: $GrayForCurrentGroupTxt;
+        font-size: 20px;
+      }
+      &__member-list {
+        height: auto;
+        margin-top: 15px;
+        bottom: 0px;
+        color: $LightGrayForPaleTxt;
+        font-size: 12px;
+        display: flex;
+      }  
+    }
+    &__right-box{
+      width: 72px;
+      margin-top: 28px;
+      margin-right: $SideMarginsChatMain;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      &__edit-btn{
+        height: 40px;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: $LightBlueForButtons;
+        border: solid 1px  $LightBlueForButtons;
+      }
+    }
+  }
+  &__message-list{
+    background-color: $WhiteForMessageListBG;
+    height: calc(100% - 100px - 90px);
+    width: 100%;
+    padding-top: 35px;
+    &__message{
+      margin-left: $SideMarginsChatMain;
+      margin-bottom: 46px;;
+      &__upper-box {
+        display: flex;
+        &__talker{
+          color: $GrayForTalkerTxt;
+          font-size: 16px;
+          text-align: center;
+        }
+        &__datetime{
+          color: $LightGrayForPaleTxt;
+          font-size: 12px;
+          margin-left: 10px;
+        }  
+      }
+      &__text{
+        margin-top: 12px;
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+  &__message-form{
+    background-color: $WhiteForMessageFormBG;
+    height: 90px;
+    width: 100%;
+    &__form{
+      padding: 20px $SideMarginsChatMain;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      ::placeholder {
+        color: $LightGrayForPaleTxt;
+        padding-left: 10px;
+      }
+      &__input-box{
+        height: 50px;
+        width: calc(100% - 100px);
+        margin-right: 15px;
+        position: relative;
+        &__text{
+          height: 50px;
+          width: 100%;
+        }
+        &__image{
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          font-size: 21px;
+          color: $LightGrayForPaleTxt;
+          cursor: pointer;
+        }
+        &__file-input{
+          display: none;
+        }  
+      }
+      &__submit{
+        background-color: $LightBlueForButtons;
+        color: $WhiteForSubmitTxt;
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+      }
+    }
+  }
+}
