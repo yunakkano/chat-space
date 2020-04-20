@@ -56,7 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'mini_racer'
 gem "haml-rails"
-gem "font-awesome-sass"
 
 group :production do
   gem 'unicorn'
