@@ -1,8 +1,11 @@
 @import "reset";
+@import "config/colors";
 @import "modules/messages";
+@import "modules/user";
 @import "variable";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "modules/flash";
 
 .wrapper{
   height: 100vh;
