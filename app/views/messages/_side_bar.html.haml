@@ -5,7 +5,7 @@
         = current_user.name
       %ul.side-bar__user-name__name-icons__icons
         %li
-          = link_to "" , class: "side-bar__user-name__name-icons__icons__edit" do
+          = link_to new_group_path , class: "side-bar__user-name__name-icons__icons__edit" do
             = icon('far', 'edit')
         %li
           = link_to edit_user_registration_path, class: "side-bar__user-name__name-icons__icons__config" do
