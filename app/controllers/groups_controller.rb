@@ -1,4 +1,8 @@
 class GroupsController < ApplicationController
+  def index
+    @groups = Group.includes(:users).all
+  end
+
   def new
     @group = Group.new
     @group.users << current_user
