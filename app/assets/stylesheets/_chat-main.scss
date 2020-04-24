@@ -83,7 +83,6 @@
       justify-content: space-between;
       ::placeholder {
         color: $LightGrayForPaleTxt;
-        padding-left: 10px;
       }
       &__input-box{
         height: 50px;
@@ -93,6 +92,7 @@
         &__text{
           height: 50px;
           width: 100%;
+          padding-left: 10px;
         }
         &__image{
           position: absolute;
