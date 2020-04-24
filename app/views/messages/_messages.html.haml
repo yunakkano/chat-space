@@ -1,0 +1,9 @@
+- messages.each do |msg|
+  .chat-main__message-list__message
+    .chat-main__message-list__message__upper-box
+      %p.chat-main__message-list__message__upper-box__talker
+        = msg.user.name
+      %p.chat-main__message-list__message__upper-box__datetime
+        = msg.created_at
+    .chat-main__message-list__message__text
+      = msg.text

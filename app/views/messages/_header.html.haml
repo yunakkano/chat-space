@@ -1,0 +1,11 @@
+.chat-main__group-info__left-box
+  %h1.chat-main__group-info__left-box__current-group
+    = group.name
+  %ul.chat-main__group-info__left-box__member-list
+    Member:
+    %li
+      - group.users.each do |user|
+        = user.name
+= link_to "#", class: "chat-main__group-info__right-box" do
+  .chat-main__group-info__right-box__edit-btn    
+    Edit

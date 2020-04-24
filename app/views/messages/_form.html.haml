@@ -1,0 +1,7 @@
+= form_for [@group, @message], html:{ class: "chat-main__message-form__form" } do |form|
+  .chat-main__message-form__form__input-box
+    = form.text_field :text, class: "chat-main__message-form__form__input-box__text", placeholder: "type a message" 
+    = form.label :image, class: "chat-main__message-form__form__input-box__image" do
+      = icon('fas', 'image')
+      = form.file_field :image, class: "chat-main__message-form__form__input-box__file-input"
+  = form.submit "Send", class: "chat-main__message-form__form__submit"
