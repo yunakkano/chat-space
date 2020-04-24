@@ -6,4 +6,7 @@
       %p.chat-main__message-list__message__upper-box__datetime
         = msg.created_at
     .chat-main__message-list__message__text
-      = msg.text
+      - if msg.text.present?
+        = msg.text
+      - if msg.image.present?
+        = image_tag msg.image.url, class: 'chat-main__message-list__message__image' 
