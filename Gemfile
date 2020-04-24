@@ -63,3 +63,7 @@ group :production do
 end
 
 gem 'pry-rails'
+
+# CarrierWave provides a  way to upload files from Ruby applications.
+gem 'carrierwave'
+gem 'mini_magick'
