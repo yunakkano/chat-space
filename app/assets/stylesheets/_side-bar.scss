@@ -43,12 +43,10 @@
     height: calc(100% - 100px);
     padding-top: 20px;
     font-weight: $FontWeightSideBar;
-    a { // &__group-name{
-      color: $WhiteForSideBarTxt;
+    &__group-name{
       font-size: 15px;
       margin-left: $LeftMarginSideBar;
       margin-bottom: 5px;
-      text-decoration: none;
     }
     &__last-message{
       font-size: 11px;
