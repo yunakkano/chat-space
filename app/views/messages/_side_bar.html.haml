@@ -11,10 +11,8 @@
           = link_to edit_user_registration_path, class: "side-bar__user-name__name-icons__icons__config" do
             = icon('fas', 'cog')
   .side-bar__group-list
-    - @groups.each do |g|
-      - g.users.each do |user|
-        - if user_signed_in? && user.id == current_user.id
-          .side-bar__group-list__group-name
-            = g.name
-          .side-bar__group-list__last-message
-            test message
+    - current_user.groups.each do |g|
+      = link_to "/groups/#{g.id}/messages", class: "side-bar__group-list__group-name" do
+        = g.name
+      .side-bar__group-list__last-message
+        = g.show_last_message
