@@ -15,5 +15,4 @@
       = link_to "/groups/#{g.id}/messages", class: "side-bar__group-list__group-name" do
         = g.name
       .side-bar__group-list__last-message
-        - if g.messages[0]
-          = g.messages[0].text
+        = g.show_last_message
