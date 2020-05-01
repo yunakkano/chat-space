@@ -23,8 +23,11 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# -> commented out 2020/5/1 due to duplicated function with rails-jquery
+# gem 'turbolinks', '~> 5'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -72,3 +75,6 @@ gem 'pry-rails'
 # CarrierWave provides a  way to upload files from Ruby applications.
 gem 'carrierwave'
 gem 'mini_magick'
+
+# For asynchronous message function
+gem 'rails-ujs'
