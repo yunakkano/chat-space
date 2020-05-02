@@ -46,6 +46,7 @@ $(function(){
       $('.chat-main__message-form__form__submit').prop('disabled', false);
     })
     .fail(function(){
+      $('.chat-main__message-form__form__submit').prop('disabled', false);
       alert('Error occured when sending the message');
     })
   })
