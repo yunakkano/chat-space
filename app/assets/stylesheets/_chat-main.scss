@@ -49,6 +49,7 @@
     height: calc(100% - 100px - 90px);
     width: 100%;
     padding-top: 35px;
+    overflow: scroll;
     &__message{
       margin-left: $SideMarginsChatMain;
       margin-bottom: 46px;;
@@ -70,7 +71,6 @@
         font-size: 14px;
         color: #434A54;
       }
-      &__image{}
     }
   }
   &__message-form{
