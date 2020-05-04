@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     return nil if params[:key] == ""
-    @users = User.where("name LIKE ?", "%#{params[:key]}%").where.not(id: current_user.id)
+    @users = User.where("name LIKE ?", "%#{params[:key]}%").where.not(id: current_user.id).limit(10)
     respond_to do |form|
       form.html
       form.json
