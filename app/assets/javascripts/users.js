@@ -6,7 +6,10 @@ $(function(){
                   <p class="chat-group-user__name">${userName}</p>
                   <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${userId}" data-user-name="${userName}">追加</div>
                 </div>`;
-    $("#user-search-result").append(html); 
+    var userlist = $('.chat-group-user__btn--del[data-user-id=' + userId + ']')
+    if (userlist.length == 0 ){
+     $("#user-search-result").append(html); 
+    }
   }
 
   function appendErrMsgToHTML(msg){
@@ -18,6 +21,7 @@ $(function(){
 
   function addUserToMemberList(userName, userId){
     let html = `<div class="chat-group-user clearfix">
+                  <input name="group[user_ids][]" type="hidden" value="${userId}">
                   <p class="chat-group-user__name">${userName}</p>
                   <div class="user-search-add chat-group-user__btn chat-group-user__btn--del" data-user-id="${userId}" data-user-name="${userName}">削除</div>
                 </div>`;
