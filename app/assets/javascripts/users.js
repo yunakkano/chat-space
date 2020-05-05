@@ -1,6 +1,4 @@
 $(function(){
-  var search_list = $("");
-  
   function appendUserToSearchResult(userName, userId){
     let html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${userName}</p>
@@ -65,7 +63,6 @@ $(function(){
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
-    appendUserToSearchResult(userName, userId);
   });
 
 });
