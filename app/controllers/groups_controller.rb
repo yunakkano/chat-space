@@ -19,6 +19,10 @@ class GroupsController < ApplicationController
 
   def edit
     @group = Group.find(params[:id])
+    respond_to do |form|
+      form.html
+      form.json
+    end
   end
 
   def update
