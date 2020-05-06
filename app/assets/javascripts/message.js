@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(msg){
-    var html_upper_part = `<div class="chat-main__message-list__message">
+    var html_upper_part = `<div class="chat-main__message-list__message" data-message-id=${msg.id}>
                             <div class="chat-main__message-list__message__upper-box">
                               <p class="chat-main__message-list__message__upper-box__talker">
                               ${msg.user_name}
@@ -48,6 +48,24 @@ $(function(){
     .fail(function(){
       $('.chat-main__message-form__form__submit').prop('disabled', false);
       alert('Error occured when sending the message');
-    })
+    });
   })
+
+  var reloadMessages = function() {
+    var last_message_id = $('.chat-main__message-list__message:last').data("message-id");
+    $.ajax({
+      url: 'api/messages',
+      type: 'GET',
+      data: {id: last_message_id},
+      dataType: 'json'
+    })
+    .done(function(){
+      console.log('success : ' + last_message_id);
+    })
+    .fail(function(){
+      console.log('error');
+    });
+
+  };
+  reloadMessages;
 });
