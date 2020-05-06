@@ -54,18 +54,25 @@ $(function(){
   var reloadMessages = function() {
     var last_message_id = $('.chat-main__message-list__message:last').data("message-id");
     $.ajax({
-      url: 'api/messages',
+      url: "api/messages",
       type: 'GET',
       data: {id: last_message_id},
       dataType: 'json'
     })
-    .done(function(){
-      console.log('success : ' + last_message_id);
+    .done(function(messages){
+      var insertHTML = '';
+      $.each(messages, function(i, message){
+        insertHTML += buildHTML(message);
+      });
+      $('.chat-main__message-list').append(insertHTML);
+      if (messages.length > 0){
+        $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+      }
     })
     .fail(function(){
       console.log('error');
     });
 
   };
-  reloadMessages;
+  setInterval(reloadMessages, 3000);
 });
