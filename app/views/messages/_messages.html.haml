@@ -1,5 +1,5 @@
 - messages.each do |msg|
-  .chat-main__message-list__message
+  .chat-main__message-list__message{data: {message: {id: msg.id}} }
     .chat-main__message-list__message__upper-box
       %p.chat-main__message-list__message__upper-box__talker
         = msg.user.name
