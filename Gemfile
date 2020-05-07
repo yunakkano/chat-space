@@ -78,3 +78,12 @@ gem 'mini_magick'
 
 # For asynchronous message function
 gem 'rails-ujs'
+
+# Install capistrano
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+end
