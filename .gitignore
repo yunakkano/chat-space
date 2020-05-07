@@ -18,3 +18,4 @@
 # ChatSpaceは画像の投稿を行なう機能が備わっていますが、投稿された画像自体はソースコードには関係のないものです。そこで、あらかじめ画像が保管されるpublic/uploadsディレクトリを.gitignoreに追加
 public/uploads/*
 public/images/*
+app/.DS_Store
