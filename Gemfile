@@ -60,10 +60,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+# devise provides user login/out
 gem 'devise'
+# Without mini_racer, the app does not startup
 gem 'mini_racer'
+# haml is simple framework to write html. Replaces ERB.
 gem "haml-rails"
+# font awesome provides set of cool icons that can be used like normal character set.
 gem "font-awesome-sass"
 
 group :production do
@@ -75,6 +78,9 @@ gem 'pry-rails'
 # CarrierWave provides a  way to upload files from Ruby applications.
 gem 'carrierwave'
 gem 'mini_magick'
+
+# fog-aws directs file upload from local storage to S3 storage
+gem 'fog-aws'
 
 # For asynchronous message function
 gem 'rails-ujs'
