@@ -19,3 +19,8 @@
 public/uploads/*
 public/images/*
 app/.DS_Store
+chat-space_credentials_pass.csv
+chat-space_credentials.csv
+ChatSpace20200507.code-workspace
+arn.csv
+config/secrets.yml
